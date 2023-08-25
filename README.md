@@ -119,3 +119,15 @@ Output:
 ```shell
 service/hello-hurban-service created
 ```
+
+Get the external IP address of the service:
+```shell
+kubectl get services
+```
+Output:
+```shell
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)        AGE
+hello        LoadBalancer   10.22.222.222   35.111.111.11   80:32341/TCP   1m
+kubernetes   ClusterIP      10.22.222.1     <none>          443/TCP        20m
+```
+It may take up to 60 seconds to assign the IP address. The external IP address will appear in the EXTERNAL-IP column for the hello service.
